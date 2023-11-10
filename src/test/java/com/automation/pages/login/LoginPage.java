@@ -34,8 +34,5 @@ public class LoginPage extends BasePage{
 		//waitUntilPageLoads();
 		return getPageTitle();
 	}
-	
-	
 
-	
 }

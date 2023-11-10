@@ -5,7 +5,7 @@
     <classes>
       <class name="com.automation.tests.scripts.SalesForceLoginScript">
         <methods>
-          <include name="login_to_salesforce"/>
+          <include name="logout_salesforce"/>
           <include name="setupBeforeTest"/>
           <include name="tearDownAfterTestMethod"/>
           <include name="setUpBeforeTestMethod"/>

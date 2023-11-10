@@ -49,7 +49,7 @@ public class BaseTest {
 	}
 	@BeforeMethod
 	@Parameters("browsername")
-	public void setUpBeforeTestMethod(@Optional("firefox") String browser_name) {
+	public void setUpBeforeTestMethod(@Optional("chrome") String browser_name) {
 		PropertiesUtility pro1 = new PropertiesUtility();
 		Properties p = pro1.createPropertyObject();
 		pro1.loadFile("applicationDataProperties", p);
@@ -62,8 +62,8 @@ public class BaseTest {
 
 	@AfterMethod
 	public void tearDownAfterTestMethod() {
-		closeBrowser();
-		myLog.info("******login_to_salesforce automation script ended***********");
+		//closeBrowser();
+		myLog.info("****** automation script ended***********");
 	}
 	
 	public WebDriver getDriverInstance() {
@@ -100,8 +100,6 @@ public class BaseTest {
 		//myLog.info("browser window has maximized");
 	}
 
-	
-	
 	public void takescreenshot(String filepath) {
 		 TakesScreenshot screenCapture=(TakesScreenshot)driver;
 		 File src=screenCapture.getScreenshotAs(OutputType.FILE);
@@ -132,8 +130,7 @@ public class BaseTest {
 	}
 	
 	public void closeBrowser() {
-		driver.close();
-	
+		driver.close();	
 		driver=null;
 	}
 
